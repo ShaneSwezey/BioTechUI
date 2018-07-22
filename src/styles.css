@@ -1,1 +1,311 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.button_1 {
+  background: #e8491d;
+  border: none;
+  height: 38px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #e8491d solid 2px;
+}
+
+header #branding {
+  float: left;
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header button {
+  background: #e8491d;
+  border: none;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.active {
+  color: #e8491d;
+}
+
+header .highlight {
+  color: #e8491d;
+}
+
+#showcase {
+  min-height: 410px;
+  background: url('./assets/Images/dna.jpg') no-repeat 0;
+  color: #ffffff;
+}
+
+#showcasebox {
+  min-height: 175px;
+  width: 30%;
+  background: rgba(0,0,0,0.85);
+  margin-top: 70px;
+  padding: 15px;
+}
+
+
+#showcasebox button {
+  float: left;
+  margin-left: 50px;
+  background: #e8491d;
+  border: none;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#newsletter {
+  padding: 15px;
+  background: #35424a;
+  color: #FFFFFF;
+}
+
+#newsletter h2 {
+  float: left;
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 20px;
+}
+
+#newsletter input[type="email"] {
+  padding: 4px;
+  height: 30px;
+  width: 250px;
+}
+
+#services {
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+#services .iconbox {
+  float: left;
+  text-align: center;
+  width: 20%;
+  padding: 15px;
+}
+
+#services .iconbox img {
+  width: 90px;
+}
+
+footer {
+  padding: 20px;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
+}
+
+#about {
+  text-align: center;
+  background-color: #ffffff; 
+}
+
+#about h1 {
+  color: #000000;
+}
+
+#about .details {
+  background-color: #e8491d;
+  float: left;
+  width: 70%;
+  padding: 10px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 10px; 
+}
+
+#about .details h2 {
+  color: #ffffff;
+}
+
+#about .questions {
+  background-color: #35424a;
+  color: #ffffff;
+  float: right;
+  min-height: 35%;
+  margin-top: 10px;
+}
+
+#about .questions h2 {
+  color: #ffffff;
+  text-decoration: underline #e8491d;
+}
+
+#about textarea {
+  width: 80%;
+}
+
+#about input {
+  display: block;
+  padding: 5px;
+  margin: auto;
+  min-width: 80%;
+}
+
+#about textarea {
+  margin: 10px;
+}
+
+#about button {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#careers {
+  background-color: #35424a;
+  height: 80%;
+}
+
+#careers h1 {
+  color: #e8491d;
+  text-align: center;
+}
+
+#positions {
+  color: #e8491d;
+  position: relative;
+  left: 50px;
+  width: 200px;
+}
+
+#careers h2 {
+  color: #e8491d;
+}
+
+#careers ul {
+  list-style-type: none;
+}
+
+#careers li {
+  background: #d3d3d3;
+  padding: 10px;
+  margin: 10px;
+  width: 95%;
+}
+
+#careers li:nth-child(odd) {
+  background: #ffffff;
+}
+
+#careers li h2 {
+  color: #e8491d;
+}
+
+#careers .careerslist .accordion {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#careersfooter {
+  padding: 20px;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #ffffff;
+  overflow: hidden;  
+}
+
+ul:nth-of-type(even) .panel{
+  background-color: #ffffff;
+}
+
+#news {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#news ul {
+  list-style-type: none;
+}
+
+#news h2 {
+  color: #e8491d;
+}
+
+#news li {
+  width: 60%;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: #35424a;
+  color: #ffffff;
+}
+
+.newsitem .newstitle {
+  float: left;
+  margin-left: 20px;
+}
+
+.newsitem .date {
+  float: right;
+  margin-right: 20px;
+}
+
+.newsitem p {
+  clear: left;
+}
+
+#contactinfo h1, h2 {
+  color: #e8491d;
+}
+
+#contactinfo p {
+  font-weight: bold;
+}
