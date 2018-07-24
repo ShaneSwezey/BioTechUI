@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Position } from '../models/Position';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -8,12 +8,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class BiotechapiService {
 
-  private biotechapiUrl = 'http://localhost:5000/api';
+  private biotechapiUrl = 'https://localhost:44366/api';
 
   constructor(private http: HttpClient) { }
 
   public getPosition() {
-    return this.http.get(`${this.biotechapiUrl}/positions`);
+    console.log("Working on it..."); 
+    let obs = this.http.get(`${this.biotechapiUrl}/positions`);
+     obs.subscribe((response) => console.log(response));
   }
 
 }

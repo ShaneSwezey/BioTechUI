@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { BiotechapiService} from '../services/biotechapiservice.service';
 
 @Component({
   selector: 'app-careers',
   templateUrl: './careers.component.html',
-  styleUrls: ['./careers.component.css']
+  styleUrls: ['./careers.component.css'],
+  providers : [ BiotechapiService ]
 })
 export class CareersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private BioService: BiotechapiService) { }
 
   ngOnInit() {
+    this.BioService.getPosition();
     this.expandPostings();
   }
 
