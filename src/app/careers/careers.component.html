@@ -7,16 +7,20 @@
     <div class="careerslist">
       <nav>
         <ul>
-          <li>
-            <h2 class="accordion">Director of Research and Development (DRD)</h2>
+          <li *ngFor="let position of positionList">
+            <h2 class="accordion">{{ position.title }}</h2>
             <div class="panel">
               <h3>Post Date</h3>
                 <ul>
-                  
+                  <li>
+                    {{ position.postdate | date:'shortDate' }}
+                  </li>
                 </ul>
                 <h3>Work Schedule</h3>
                 <ul>
-                  
+                  <li>
+                    {{ position.schedule }}
+                  </li>
                 </ul>
               <h3>Experience and Qualifications</h3>
                 <ul>
@@ -28,57 +32,7 @@
                 </ul>
               <h3>Position Responsibilities</h3>
                 <ul>
-
-                </ul>
-            </div>
-          </li>
-          <li>
-            <h2 class="accordion">Sr. Project Manager</h2>
-            <div class="panel">
-              <h3>Post Date</h3>
-                <ul>
                   
-                </ul>
-                <h3>Work Schedule</h3>
-                <ul>
-                  
-                </ul>
-              <h3>Experience and Qualifications</h3>
-                <ul>
-
-                </ul>
-              <h3>Education</h3>
-                <ul>
-
-                </ul>
-              <h3>Position Responsibilities</h3>
-                <ul>
-
-                </ul>
-            </div>
-          </li>
-          <li>
-            <h2 class="accordion">Research Associate I or II</h2>
-            <div class="panel">
-              <h3>Post Date</h3>
-                <ul>
-
-                </ul>
-                <h3>Work Schedule</h3>
-                <ul>
-                  
-                </ul>
-              <h3>Experience and Qualifications</h3>
-                <ul>
-
-                </ul>
-              <h3>Education</h3>
-                <ul>
-
-                </ul>
-              <h3>Position Responsibilities</h3>
-                <ul>
-
                 </ul>
             </div>
           </li>

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Position } from '../models/Position';
 import { HttpClient } from '@angular/common/http';
+import { Position } from '../models/Position';
+import { Observable } from '../../../node_modules/rxjs';
+
 
 
 @Injectable({
@@ -12,10 +14,7 @@ export class BiotechapiService {
 
   constructor(private http: HttpClient) { }
 
-  public getPosition() {
-    console.log("Working on it..."); 
-    let obs = this.http.get(`${this.biotechapiUrl}/positions`);
-     obs.subscribe((response) => console.log(response));
+  public getPosition(): Observable<Position[]> {
+    return this.http.get<Position[]>(`${this.biotechapiUrl}/positions`);
   }
-
 }

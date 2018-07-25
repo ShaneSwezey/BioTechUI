@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BiotechapiService} from '../services/biotechapiservice.service';
+import { Observable } from '../../../node_modules/rxjs';
+import { Position } from '../models/Position';
 
 @Component({
   selector: 'app-careers',
@@ -9,10 +11,12 @@ import { BiotechapiService} from '../services/biotechapiservice.service';
 })
 export class CareersComponent implements OnInit {
 
+  private positionList = [];
+
   constructor(private BioService: BiotechapiService) { }
 
   ngOnInit() {
-    this.BioService.getPosition();
+    this.BioService.getPosition().subscribe(res => this.positionList = res);
     this.expandPostings();
   }
 
