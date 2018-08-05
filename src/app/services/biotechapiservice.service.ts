@@ -17,4 +17,10 @@ export class BiotechapiService {
   public getPosition(): Observable<Position[]> {
     return this.http.get<Position[]>(`${this.biotechapiUrl}/positions`);
   }
+
+  public postNewsLetterSubscriber(emailAddress: string) {
+    console.log(`email address test: ${emailAddress}`);
+    //this.http.post(`${this.biotechapiUrl}/NewsLetter/CreateAsync`, emailAddress);
+  }
+
 }

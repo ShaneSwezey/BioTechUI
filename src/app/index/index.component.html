@@ -12,8 +12,8 @@
   <div class="container">
     <h2>Subcribe to our Newsletter</h2>
     <form>
-      <input type="email" placeholder="Enter Email...">
-      <button type="submit" class="button_1">Subcribe</button>
+      <input type="email" name="emailaddress" required placeholder="Enter Email..." [(ngModel)]="emailAddresss"/>
+      <button type="submit" class="button_1" (click)="sendSubscriber(emailAddresss)">Subcribe</button>
     </form> 
   </div>
 </section>

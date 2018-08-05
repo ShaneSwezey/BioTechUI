@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BiotechapiService} from '../services/biotechapiservice.service';
+import { BiotechapiService } from '../services/biotechapiservice.service';
 import { Observable } from '../../../node_modules/rxjs';
 import { Position } from '../models/Position';
 
