@@ -13,6 +13,7 @@ import { CareersComponent } from './careers/careers.component';
 import { ContactComponent } from './contact/contact.component';
 import { NewsComponent } from './news/news.component';
 
+import { BiotechapiService } from '../app/services/biotechapiservice.service';
 
 import { appRoutes } from '../routes';
 
@@ -34,7 +35,7 @@ import { appRoutes } from '../routes';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ BiotechapiService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,7 +5,6 @@ import { BiotechapiService } from '../services/biotechapiservice.service';
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css'],
-  providers: [ BiotechapiService ]
 })
 export class IndexComponent implements OnInit {
 
