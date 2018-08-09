@@ -40,10 +40,10 @@
       <div class="questions">
         <h2>Questions</h2>
         <form>
-          <input type="text" placeholder="name...">
-          <input type="email" placeholder="email...">
-          <textarea rows="4" cols="50" placeholder="question..."></textarea>
-          <button type="submit" class="button_1">Submit</button>
+          <input type="text" placeholder="name..." [(ngModel)]="name" name="name" required>
+          <input type="email" placeholder="email..." [(ngModel)]="emailAddress" name="emailAddress" required>
+          <textarea rows="4" cols="50" placeholder="question..." [(ngModel)]="question" name="question" required></textarea>
+          <button type="submit" class="button_1" (click)="submitQuestion(name, emailAddress, question)">Submit</button>
         </form>
       </div>
     </div>

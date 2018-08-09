@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { BiotechapiService } from '../services/biotechapiservice.service';
 import { Observable } from '../../../node_modules/rxjs';
 import { Position } from '../models/Position';
+import { BiotechapiService } from '../services/biotechapiservice.service';
 
 @Component({
   selector: 'app-careers',
   templateUrl: './careers.component.html',
   styleUrls: ['./careers.component.css'],
-  providers : [ BiotechapiService ]
 })
 export class CareersComponent implements OnInit {
 
@@ -16,8 +15,11 @@ export class CareersComponent implements OnInit {
   constructor(private BioService: BiotechapiService) { }
 
   ngOnInit() {
-    this.BioService.getPosition().subscribe(res => this.positionList = res);
-    this.expandPostings();
+    this.BioService.getPositions().subscribe(res =>
+      this.positionList = res, 
+      err => console.error(err), 
+      () => console.log(this.positionList));
+    //this.expandPostings();
   }
 
   public expandPostings() {

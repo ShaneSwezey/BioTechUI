@@ -13,4 +13,12 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  private sendSubscriber(sEmailAddress : string) {
+    this.bioService.postNewsLetterSubscriber(sEmailAddress);
+  }
+
+  private submitQuestion(name: string, emailAddress: string, question: string) {
+    this.bioService.postQuestion(name, emailAddress, question);
+  }
+
 }
