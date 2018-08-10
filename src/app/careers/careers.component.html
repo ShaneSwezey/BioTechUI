@@ -9,7 +9,7 @@
         <ul>
           <li *ngFor="let position of positionList">
             <h2 class="accordion">{{ position.title }}</h2>
-            <div >
+            <div class="careerSubjects">
               <h3>Post Date</h3>
                 <ul>
                   <li>
@@ -24,6 +24,9 @@
                 </ul>
               <h3>Experience and Qualifications</h3>
                 <ul>
+                  <li *ngFor="let exp of position.experiences">
+                    {{ exp.statement }}
+                  </li>
                   <li *ngFor="let qual of position.qualifications">
                     {{ qual.statement }}
                   </li>

@@ -18,23 +18,25 @@ export class CareersComponent implements OnInit {
     this.BioService.getPositions().subscribe(res =>
       this.positionList = res, 
       err => console.error(err), 
-      () => console.log(this.positionList));
-    //this.expandPostings();
+      //() => console.log(this.positionList)
+    );
+    this.expandPostings();
   }
 
   public expandPostings() {
     let acc = document.getElementsByClassName("accordion");
-        
+    console.log(acc);
+
     for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            let panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
     }
   }
 

@@ -229,15 +229,17 @@ footer {
   list-style-type: none;
 }
 
+.careerSubjects li::before {
+  content: "•";
+  color: #e8491d;
+  padding-right: 1.1225em;
+}
+
 #careers li {
-  background: #d3d3d3;
+  background: #ffffff;
   padding: 10px;
   margin: 10px;
   width: 95%;
-}
-
-#careers li:nth-child(odd) {
-  background: #ffffff;
 }
 
 #careers li h2 {
@@ -256,15 +258,11 @@ footer {
   text-align: center;
 }
 
-.panel {
+.careerSubjects {
   padding: 0 18px;
-  display: none;
+  /* display: none; */
   background-color: #ffffff;
   overflow: hidden;  
-}
-
-ul:nth-of-type(even) .panel{
-  background-color: #ffffff;
 }
 
 #news {
